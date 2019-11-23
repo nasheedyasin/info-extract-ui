@@ -1,0 +1,59 @@
+<div class="row"> 
+  <div class="column right">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          {{ fileName }}
+        </mat-card-title>
+        <mat-card-subtitle>
+          Extracted Information
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <table class="files-table mat-elevation-z8">
+          <tr>
+              <th> S.No. </th>
+              <th>Data Field</th> 
+              <th>Value</th>
+              
+              
+          </tr>
+          <tr *ngFor="let data of infoExtracted | keyvalue;let i=index">
+              <td>{{i+1}}</td>
+              <td>
+                <button mat-button color="primary" (click) = "applyFilter(data.key)">{{ data.key }}</button>
+              </td>
+              <td (click) = "applyFilter(data.key)">{{ data.value[0] }}</td>
+          </tr>
+        </table>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="matButton" mat-button (click)="returnToList()">Done</button>
+      </mat-card-actions>
+  </mat-card>
+  </div>
+  <div class="column left">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Marked Image
+        </mat-card-title>
+        <mat-card-subtitle *ngIf="filterApplied">
+          Filtered By: {{filterApplied}}
+          <mat-card-action>
+              <button mat-icon-button color="warn" (click)="resetFilter()" matTooltip="Refresh">
+                <mat-icon>sync</mat-icon>
+              </button>
+          </mat-card-action>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+          <app-image-viewer [images]="imageSource"
+          [idContainer]="'idOnHTML'"
+          [loadOnInit]="true">
+        </app-image-viewer>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>

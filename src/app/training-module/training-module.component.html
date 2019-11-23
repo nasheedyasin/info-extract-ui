@@ -1,0 +1,6 @@
+<div class="uploader" *ngIf = "!serveImages.B64Images else imgCropping">
+    <app-training-uploader></app-training-uploader>
+</div>
+<ng-template #imgCropping>
+    <app-image-cropper></app-image-cropper>
+</ng-template>

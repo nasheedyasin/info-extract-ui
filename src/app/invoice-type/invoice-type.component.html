@@ -1,0 +1,17 @@
+<mat-form-field>
+        <mat-label>Vendor Name</mat-label>
+
+      
+        <mat-select [formControl]="panelColor" panelClass="example-panel-{{panelColor.value}}" required>
+        <!-- [formControl]="panelColor" 
+                panelClass="example-panel-{{panelColor.value}}"> -->
+                <mat-option *ngFor="let item of data" (click)="selected(item.name)" [value]="item.id">{{item.name}}</mat-option> 
+                <!-- <mat-option value="AmeriHome">AmeriHome</mat-option>
+                <mat-option value="BoA">BoA</mat-option>   -->
+        </mat-select> 
+
+        
+     
+        
+        
+</mat-form-field>

@@ -1,0 +1,40 @@
+<div class="invoiceList" *ngIf="!extractedInformation.extractedData else extractedInfo">
+  <ng-template #invoiceTable>
+    <h2>List of the Files Uploaded</h2>
+    <h3>Template: {{fileNameService.fileType}}</h3>
+
+    <br>
+
+    <div class="table-container">
+      <table class="files-table mat-elevation-z8" *ngIf="fileList">
+        <tr>
+            <th mat-header-cell>S.No.</th>
+            <th mat-header-cell>Name of the Files</th> 
+            <th mat-header-cell>Options Available</th>
+        </tr>
+        <tr *ngFor="let file of fileList;let i=index">
+            <td mat-cell>{{i+1}}</td>
+            <td mat-cell>{{ file.fileName }}</td>
+            <td mat-cell>
+                  <button class="matButton2" mat-flat-button (click)="convertToJpeg(i)" >Extract Info</button>  &nbsp;&nbsp;
+            </td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <div>
+      <a href="http://localhost:4200/extract"><button mat-flat-button class="matButton" (click)="goBack()">Back</button></a>  
+      &nbsp;
+      <a href="http://localhost:4200/home"><button mat-flat-button class="matButton" (click)="goBack()">Done</button></a>    
+    </div>
+
+  </ng-template>
+
+  <div class= "spinner" *ngIf = "showFlag else invoiceTable">
+    <mat-spinner color = "accent"></mat-spinner>
+  </div>
+</div>
+
+<ng-template #extractedInfo>
+  <app-information-dialog></app-information-dialog>
+</ng-template>

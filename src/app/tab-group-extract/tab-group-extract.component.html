@@ -1,0 +1,29 @@
+<mat-tab-group [backgroundColor]="mat-primary" dynamicHeight="true">
+    <mat-tab>
+        <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">live_help</mat-icon>
+                Invoice Details
+        </ng-template>
+    
+        <div>
+            <app-batch-or-single></app-batch-or-single>
+        </div>
+
+        <div>
+            <app-invoice-type></app-invoice-type>
+        </div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">picture_as_pdf</mat-icon>
+                Upload PDFs
+        </ng-template>
+
+        <!-- <div class="example-large-box mat-elevation-z4">
+        Large content
+        </div> -->
+
+        <app-stepper></app-stepper>
+    </mat-tab>
+</mat-tab-group>
+

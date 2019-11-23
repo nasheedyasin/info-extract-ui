@@ -1,0 +1,7 @@
+<div *ngIf = "!hideStepper else uploadList">
+ <app-stepper (stepperHide) = "stepperStateChange($event)"></app-stepper>
+</div>
+
+<ng-template #uploadList>
+    <app-upload-list></app-upload-list>
+</ng-template>

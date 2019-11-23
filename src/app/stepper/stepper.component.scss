@@ -1,0 +1,58 @@
+.btn-continue{
+    color: white;
+   background-color: #007BFF;
+   width: 125px;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green  #4CAF50 */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .btn2 {
+    background-color: #007BFF; /* Green  #4CAF50 */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  h3{
+    color: rgb(173, 173, 173)
+  }
+
+.mat-next {
+  background-color: #70C989;
+  color: #fff;
+}
+
+.mat-previous {
+  background-color: #70C989;
+  color: #fff;
+}
+
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #70C989; 
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+  background-color: #70C989; 
+}

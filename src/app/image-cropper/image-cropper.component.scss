@@ -1,0 +1,270 @@
+.img-container {
+    width: 600px;
+    height: 700px;
+    float: left;
+}
+
+.img-preview {
+    float: left;
+    margin-left: 10px;
+}
+
+  .btn {
+    background-color:oldlace;
+    border: 0.5px black;
+    color: black;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: auto;
+  }
+
+  .btn:hover
+{
+background-image:none;
+background-color:lightseagreen;
+color: white;
+}
+
+  .btn2 {
+    background-color: #007BFF; /* Green  #4CAF50 */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+.column {
+    
+  float: left;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 60%;
+  
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.matDeleteIcon:hover {
+    color: red;
+    
+  }
+
+
+/// TEST CODE
+
+.btn2:hover
+{
+background-image:none;
+background-color:lightseagreen;
+color: white;
+}
+
+ 
+
+.delete-file {
+    border: 0.5px black;
+    color: black;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: auto;
+  }
+  
+  .delete-file:hover
+  {
+  background-image:none;
+  background-color:red;
+  }
+  //---------------------------------------------------
+  
+  
+  .files-table .delete-file {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1px;
+
+  }
+  .files-table .delete-file img{
+    width:20px;
+  }
+  
+  
+  //---------------------------------------------------
+  
+    // .files-table {
+    //   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    //   border-collapse: collapse;
+    //   width: 100%;
+    //   text-align: center;
+    // //   margin: 10px;
+
+    // }
+    
+    // .files-table tr {
+    //   border: 1px solid #ddd;
+    //   padding: 8px;
+    // }
+    
+    // .files-table tr:nth-child(even){background-color: whitesmoke;
+    //     color:black;}
+          
+    // .files-table tr:nth-child(odd){background-color: white;
+    //         color:black;}
+        
+        
+    //     //   .files-table tr:hover {background-color:lightblue;
+    //     // color: white;}
+    
+    // .files-table th {
+    //   padding-top: 12px;
+    //   padding-bottom: 12px;
+    //   text-align: center;
+    //   background-color: #70C989;
+    //   // background-color:    #4CAF50;
+    //   color: white;
+    // }
+
+h3{
+  color: rgb(248, 247, 247)
+  }
+
+//Table Styling
+.files-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.files-table td, tr {
+  // border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.files-table tr:nth-child(even){background-color: #f2f2f2;
+color:black;}
+
+.files-table tr:nth-child(odd){background-color: white;
+  color:black;}
+
+.files-table tr:hover {background-color:#ddd;}
+
+
+.files-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #20272D;
+  // background-color:    #4CAF50;
+  color: white;
+}
+
+#pageNav{ // Coloring the Page Number display 
+  color: rgb(248, 247, 247)
+}
+
+.mat-add {
+  background-color: navy;
+  color: white;
+}
+
+.mat-pageNav {
+  background-color: lightseagreen;
+  color:  #fff;
+}
+
+
+.mat-clearCropper{
+  background-color: white;
+  color: red;
+}
+
+.mat-train{
+  background-color: rgb(16, 184, 16);
+  color: white;
+}
+
+.mat-delete{
+  color: black;
+}
+
+.matButton{
+  // font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  // font-size: 14px;
+  // font-weight: bold;
+  background-color: #70C989;
+}
+
+.matButton:hover {
+  opacity: 0.9;
+}
+
+
+.matButton2{
+  background-color: #70C989;
+}
+
+.matButton2:hover {
+  background-color: white;
+  opacity: 0.9;
+}
+
+.matButton3{
+  background-color:lightseagreen;
+}
+
+.matButton3:hover {
+  opacity: 0.9;
+}
+
+
+.trainButton{
+  // font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  // font-size: 14px;
+  // font-weight: bold;
+  background-color: rgb(66, 136, 253);
+}
+
+.trainButton:hover {
+  opacity: 0.9;
+}
+
+.matUtilityIcon:hover {
+color: white;
+}
+
+.deleteAllButton:hover {
+  opacity: 0.9;
+}

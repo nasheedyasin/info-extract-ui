@@ -1,0 +1,24 @@
+<!-- <div style="text-align: center">
+     <h3>{{ imgName }}</h3>
+    <img [src]="imgUrl">
+</div> -->
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ imgName }}</mat-card-title>
+        <mat-card-subtitle>Entity Preview</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+            <img [src]="imgUrl">
+    </mat-card-content>
+    <mat-dialog-actions>
+            <button class="matButton" mat-raised-button (click)="close()">Close</button>
+        </mat-dialog-actions>
+</mat-card>
+
+
+
+
+
+
+    

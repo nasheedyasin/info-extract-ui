@@ -1,0 +1,38 @@
+<ng-template #uploadComponent>
+  <h3><b>Step 1. Upload an Invoice To Begin Training</b></h3>
+<br/>
+  <app-invoice-type></app-invoice-type>
+
+  <br/>
+  <br/>
+  <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+      <input class="uploadImage" hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+      
+      <p id="uploadMessage">Drag & Drop Files Here To Upload</p> 
+  </div>
+
+    <div  class="files-list" *ngFor="let file of fileCollection;let i=index">
+      <button mat-button id="uploadMessage2" (click)=filePreview(i) matTooltip="Preview">{{ file.fileName }}</button>
+      <button mat-icon-button color="warn" (click)="deleteAttachment(i)" matTooltip="Delete">
+          <mat-icon>delete</mat-icon> 
+      </button>
+    </div>
+
+
+    <br />
+    <div id="Extract_Button">
+      <button class="matButton" mat-raised-button (click)="sendFiles()" [disabled]="!fileNameService.fileType">
+        <mat-icon>cloud_upload</mat-icon>
+        &nbsp;Upload
+      </button>
+      <br />
+      <br />
+  </div>
+</ng-template>
+
+<div class= "spinner" *ngIf = "showSpinner else uploadComponent">
+  <mat-spinner  color = "accent"></mat-spinner>
+</div>
+  
+
+  

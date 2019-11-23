@@ -1,0 +1,16 @@
+<div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+    <input class="uploadImage" hidden type="file" #fileInput (change)="uploadFile($event.target.files)" multiple>
+    <p id="uploadMessage">Drag & Drop Files Here To Upload</p> 
+  </div>
+  <div  class="files-list" *ngFor="let file of fileCollection;let i=index">
+      <button mat-button id="uploadMessage2" matTooltip="Preview" (click)=filePreview(i)>{{ file.fileName }}</button>
+      <button mat-icon-button color="warn" (click)="deleteAttachment(i)">
+          <mat-icon>delete</mat-icon> 
+      </button>
+    </div>
+  <div id="Extract_Button">
+    <button class="matButton" mat-raised-button color="primary" (click)="sendFiles()" >
+        <mat-icon>cloud_upload</mat-icon>
+        &nbsp;Upload
+    </button>
+  </div>

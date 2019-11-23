@@ -1,0 +1,32 @@
+mat-grid-tile {
+    background: #343A40;
+    padding: 5px;
+    font-size: 28px;
+    color:#8c989c;
+    font-variant-caps: all-small-caps;
+    margin-right:10px;
+    
+  }
+  
+mat-grid-tile:hover {
+    background:#70C989;
+    color: white; 
+}
+
+#TrainTile:hover {
+    /* background-image: url("../../assets/Training.png");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    height: 200px;
+    width: auto;
+    background-position: center; */
+    background-color: #da3114;
+}
+
+#ExtractTile:hover {
+background-color: #0eabe0;
+}
+
+#LibraryTile:hover {
+    background-color: #f3bd01;
+}

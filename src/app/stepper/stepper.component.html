@@ -1,0 +1,46 @@
+<br/>
+<!-- [backgroundColor]="mat-primary" -->
+<mat-horizontal-stepper style="background-color: #343A40;" *ngIf="showMePartially" >
+  <mat-step label="1. Upload Mode and Invoice Type" state="number">
+    
+      <div>
+        <div>
+          <app-batch-or-single ></app-batch-or-single> 
+        </div>
+        <br/>
+        <div>
+          <app-invoice-type></app-invoice-type>          
+        </div>
+      </div>  
+        <br/>
+      <div>
+        <button mat-mini-fab matStepperNext color="next" [disabled]="!fileNameService.fileType">
+          <mat-icon aria-hidden="false" aria-label="Example next icon" >navigate_next</mat-icon>        
+        </button>
+      </div>
+    
+  </mat-step>
+    
+  <mat-step  label="2. Upload Invoice/s" state="upload">
+    
+      <!-- <h3>Upload invoices here or drag and drop them below </h3> -->
+      <app-pdf-uploader (hideStepper)= "stepperStateChange($event)" ></app-pdf-uploader>       
+      <button mat-mini-fab matStepperPrevious color="previous">
+          <mat-icon aria-hidden="false" aria-label="Example next icon" >navigate_before</mat-icon>        
+      </button>
+    
+  </mat-step>
+
+
+  
+  
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="number">
+      <mat-icon>plus_one</mat-icon>
+    </ng-template>
+
+    <ng-template matStepperIcon="upload">
+        <mat-icon>attachment</mat-icon>
+      </ng-template>
+  </mat-horizontal-stepper>
+  <app-upload-list *ngIf="!showMePartially"></app-upload-list>

@@ -1,0 +1,85 @@
+
+
+<!-- NAVANSHU CODE -->
+<div class="row"> 
+    <div class="column left">
+        <div class="img-container">
+             <h3><b>Step 2. Crop the information zones</b></h3>
+             <div id = "pageNav">
+
+                <button mat-mini-fab (click)="decrementPage()" class="matButton3">
+                        <mat-icon class="matUtilityIcon" aria-hidden="false" aria-label="Example backward icon" >
+                        arrow_back
+                    </mat-icon>
+                </button> &nbsp; &nbsp;
+
+                <b>Page: {{this.pageNumber + 1}} of {{pageURLs.length}}</b> &nbsp; &nbsp;
+ 
+                <button mat-mini-fab  (click)="incrementPage()" class="matButton3">
+                        <!-- <button mat-mini-fab  (click)="incrementPage()" class="matButton" color="pageNav"> -->
+                        <mat-icon class="matUtilityIcon" aria-hidden="false" aria-label="Example forward icon" >
+                            arrow_forward
+                        </mat-icon>        
+                </button>
+
+                &nbsp; &nbsp;
+                <button mat-raised-button color="clearCropper" (click)="clearCropper()">Clear Cropper</button>
+             </div>
+             <br>
+             <img hidden #image [src]="imageSource" (load)="renderCropper()" > 
+        </div>
+    </div>
+
+    <div class="column right">
+        <mat-card style="background-color: #343A40;" >
+            <mat-card-header>
+                <mat-card-title>{{ vendorName }}</mat-card-title>
+                <mat-card-subtitle>Vendor</mat-card-subtitle>
+            </mat-card-header>
+            
+            <mat-card-content>
+                <div>
+
+                    <mat-label>Entity Name: </mat-label> &nbsp;
+                    <input placeholder="Enter Entity Name"  [(ngModel)] = "imageDetails.ImageName"> &nbsp;
+                    <!-- <button mat-mini-fab (click)="addtoImgList()" color="add"> -->
+                    <button mat-mini-fab (click)="addtoImgList()" class="matButton3">
+                            <mat-icon class="matUtilityIcon" aria-hidden="false" aria-label="Example add icon" >add</mat-icon>        
+                    </button>
+                </div>
+                <br>
+                <div>
+                <table mat-table class="files-table mat-elevation-z8" *ngIf = "imageDetailsList.length > 0">
+                        <tr>   
+                            <th mat-header-cell>Entity Name</th>
+                            <th mat-header-cell>Actions</th>
+
+                        </tr>
+                        <tr *ngFor = "let image of imageDetailsList; let i = index">
+                            <td mat-cell>{{image.ImageName}}</td>
+                            <td mat-cell>
+                                <button class="matButton" mat-flat-button (click)="imagePreview(image)">Preview Entity</button>
+                                <button mat-icon-button  (click)="removeTemplate(i)" color="delete">
+                                        <mat-icon class="matDeleteIcon" aria-hidden="false" aria-label="Example forward icon" >
+                                            delete
+                                        </mat-icon>        
+                                </button>
+                            </td>
+                        </tr>
+                </table>
+                </div>
+
+                <br>
+                <div *ngIf="imageDetailsList.length > 0">
+                    <button mat-raised-button class="trainButton" (click)="uploadTemplates()">Train</button>
+                    &nbsp;
+                    
+                    <button class="deleteAllButton" mat-raised-button color="warn" (click)="clearCroppedZones()">
+                        Delete All
+                    </button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div> 
+

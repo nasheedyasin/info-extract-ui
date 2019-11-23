@@ -1,0 +1,182 @@
+// .files-list .delete-file {
+//     background: transparent;
+//     border: none;
+//     cursor: pointer;
+//     display: inline-block;
+//   }
+//   .files-list .delete-file img{
+//     width:30px;
+//   }
+
+@import url(https://fonts.googleapis.com/css?family=Lato&subset=latin-ext);
+h2
+{
+  font-weight: 600;
+  text-align: center;
+  font-family: Lato;
+}
+
+.matButton{
+  // font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  // font-size: 14px;
+  // font-weight: bold;
+  background-color: #70C989;
+}
+
+.matButton:hover {
+  opacity: 0.9;
+}
+
+.matButton2{
+  // font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  // font-size: 14px;
+  // font-weight: bold;
+  background-color: rgb(66, 136, 253);
+}
+
+.matButton:hover {
+  opacity: 0.9;
+}
+
+
+
+
+// .table-container {
+//     align-items: center;
+//     align-self: center;
+//     margin: 0 auto;
+//     margin-left: 300px;
+//   }
+
+  .btn {
+    background-color:oldlace;
+    border: 0.5px black;
+    color: black;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: auto;
+  }
+
+
+  .btn2 {
+    border: 0.5px black;
+    color: black;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: auto;
+  }
+
+  .btn2:hover
+{
+background-image:none;
+background-color:#70C989;
+color: white;
+}
+
+ .material-icons:hover {
+  background-color: red;
+  color: red;
+  
+}
+  
+
+.delete-file {
+  border: 0.5px black;
+  color: black;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.delete-file:hover
+{
+background-image:none;
+background-color:red;
+}
+//---------------------------------------------------
+
+
+.files-table .delete-file {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.files-table .delete-file img{
+  width:30px;
+}
+
+
+//---------------------------------------------------
+
+.files-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.files-table td, tr {
+  // border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.files-table tr:nth-child(even){background-color: #f2f2f2;
+color:black;}
+
+.files-table tr:nth-child(odd){background-color: white;
+  color:black;}
+
+.files-table tr:hover {background-color:#ddd;}
+
+
+.files-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #20272D;
+  // background-color:    #4CAF50;
+  color: white;
+}
+
+.spinner{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.invoiceList{
+  padding: 40px 0;
+  text-align: center;
+}
+
+h3{
+  color: rgb(248, 247, 247)
+}
+h2{
+  color: rgb(248, 247, 247)
+}
+
