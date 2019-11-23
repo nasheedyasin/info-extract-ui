@@ -41,7 +41,7 @@ b64MarkedImg: any = null; // contains the recieved base64 images
     // change the IP when in office
     // IP (Office): 172.23.179.252 / 172.23.115.77 / 172.23.179.17
     // IP (Home): 192.168.0.102
-    this.http.post("http://172.23.115.77:5000/api/InfoExtractor  ",this.myJson).subscribe(
+    this.http.post("http://172.23.114.23:5000/api/InfoExtractor  ",this.myJson).subscribe(
       (data: any) => {
         this.extractedInformation.fileName = data["FileName"];
         this.extractedInformation.b64MarkedImages = data["MarkedImages"];
@@ -60,7 +60,7 @@ b64MarkedImg: any = null; // contains the recieved base64 images
         } 
         // IP (Office): 172.23.179.252 / 172.23.115.77
         // IP (Home): 192.168.0.102
-        this.http.post("http://172.23.115.77:5000/api/ConvertPDFs",this.myJson).subscribe(
+        this.http.post("http://172.23.114.23:5000/api/ConvertPDFs",this.myJson).subscribe(
         (data: any) => {
           this.displayInfo();
       }

@@ -53,7 +53,7 @@ export class PdfUploaderComponent implements OnInit {
       formData.append(file.fileName, file.fileData);
     }
 
-    this.http.post<any>("http://localhost:2136/api/upload/files", formData).subscribe(
+    this.http.post<any>("http://faiblr04w13677/SIMSservice/api/upload/files", formData).subscribe(
         () => { 
                   this.notifyService.showSuccess("File uploaded successfully", "Notification"); 
                   this.hideStepper.emit(true);
